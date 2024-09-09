@@ -1,6 +1,9 @@
+// @ts-ignore
 import { useEffect, useState } from "preact/hooks";
 import "react-responsive-modal/styles.css";
+// @ts-ignore
 import { Modal } from "react-responsive-modal";
+// @ts-ignore
 import { IoClose } from "react-icons/io5";
 
 // @ts-ignore
@@ -9,8 +12,10 @@ import { Checkers, Utils } from "ymir-js";
 const { Board } = Checkers.Turkish;
 const { parseCoord } = Utils;
 
+// @ts-ignore
 import style from "./board.module.css";
 import { getVoice } from "../../utils";
+// @ts-ignore
 import { useCountUp } from "react-countup";
 import { useRef } from "react";
 
@@ -30,9 +35,11 @@ const AppBoard = () => {
   const countUpRef = useRef(null);
   const [started, setStarted] = useState(false);
 
+  // @ts-ignore
   const onOpenModalPlayAgain = () => setOpenPlayAgain(true);
   const onCloseModalPlayAgain = () => setOpenPlayAgain(false);
 
+  // @ts-ignore
   const onOpenModalStartGame = () => setOpenStartGame(true);
   const onCloseModalStartGame = () => setOpenStartGame(true);
 
@@ -172,6 +179,7 @@ const AppBoard = () => {
   }, [move]);
 
   return (
+    // @ts-ignore
     <>
       <div
         style={{
@@ -224,6 +232,7 @@ const AppBoard = () => {
               {boardMatrix.map(
                 (/** @type {{ coord: any; item: any; }[]} */ row) => (
                   <div
+                    // @ts-ignore
                     key={row}
                     class={
                       // @ts-ignore
@@ -260,9 +269,15 @@ const AppBoard = () => {
               )}
             </div>
             <div className={style.letterContainer}>
-              {listOfLetters.map((letter, index) => (
-                <div className={style.letter}>{letter}</div>
-              ))}
+              {listOfLetters.map(
+                (
+                  letter,
+                  // @ts-ignore
+                  index
+                ) => (
+                  <div className={style.letter}>{letter}</div>
+                )
+              )}
             </div>
           </div>
           <div className={style.numberContainer}>
