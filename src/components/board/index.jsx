@@ -312,7 +312,9 @@ const AppBoard = () => {
         showCloseIcon={false}
         center
       >
-        <h2 style={{ color: "#57250b", fontSize: 20 }}>Game will start in</h2>
+        <h2 style={{ color: "#57250b", fontSize: 20 }}>
+          Game is under maintainance
+        </h2>
 
         <div
           style={{
@@ -322,12 +324,12 @@ const AppBoard = () => {
           }}
         >
           {/* {started ? ( */}
-          <span
+          {/* <span
             style={{ fontSize: 35, color: "#57250b", fontWeight: "700" }}
             ref={countUpRef}
-          />
+          /> */}
           {/* // ) : ( */}
-          {!started && (
+          {/* {!started && (
             <button
               style={{
                 backgroundColor: "#57250b",
@@ -349,7 +351,7 @@ const AppBoard = () => {
               Start
             </button>
           )}
-          {/* // )} */}
+          // )} */}
         </div>
       </Modal>
     </>
